@@ -711,20 +711,14 @@ LIEN d'édition : http://www.guidepg.com/wp-admin/post.php?post=184&action=edit
   };
 
   function switchLanguage(language) {
-// Update language attribute
-document.documentElement.lang = language;
+  // Update language attribute
+  document.documentElement.lang = language;
 
-// Get base URL
-const baseUrl = window.location.origin;
-console.log(baseUrl)
-// Construct new URL
-const newUrl = baseUrl + "/" + language;
-console.log(newUrl)
-// Navigate to the new URL
-window.history.pushState({}, "", newUrl);
+  // Render content for the new language
+  renderContent(language);
 
-// Render content for the new language
-renderContent(language);
+  // Update hash in URL
+  window.location.hash = language;
 }
 
   function renderContent(language) {
