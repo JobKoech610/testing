@@ -18,7 +18,7 @@
 </script> -->
 <link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt" />
 <link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ" />
-<!-- End Wayback Rewrite JS Include -->
+<!-- End   Rewrite JS Include -->
 
 	<meta charset="UTF-8">
 
@@ -76,10 +76,11 @@
 <!--[if lt IE 9]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css"><![endif]-->	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
   <body class="home blog unknown">
-    <!-- BEGIN WAYBACK TOOLBAR INSERT -->
+    <!-- BEGIN   TOOLBAR INSERT -->
     <script>
       __wm.rw(0);
     </script>
@@ -108,7 +109,7 @@
             "
           >
             <div id="wm-logo" style="/*width:110px;*/ padding-top: 12px">
-              <a href="/web/" title="Wayback Machine home page"
+              <!-- <a href="/web/" title="  Machine home page"
                 ><img
                   src="images/index-1.png"
                   srcset="
@@ -116,10 +117,10 @@
                   images/index-3.png
                   images/index-4.png
                   "
-                  alt="Wayback Machine"
+                  alt="  Machine"
                   style="width: 100px"
                   border="0"
-              /></a>
+              /></a> -->
             </div>
             <div
               class="c"
@@ -278,7 +279,7 @@
                 <a
                   class="xxs"
                   href="http://faq.web.archive.org/"
-                  title="Get some help using the Wayback Machine"
+                  title="Get some help using the   Machine"
                   style="top: -6px"
                   ><span
                     class="iconochive-question"
@@ -414,7 +415,7 @@
                     <a href="http://www.alexa.com/">Alexa Internet</a> has been
                     donating their crawl data to the Internet Archive. Flowing
                     in every day, these data are added to the
-                    <a href="http://web.archive.org/">Wayback Machine</a> after
+                    <a href="http://web.archive.org/">  Machine</a> after
                     an embargo period.
                   </div>
                 </div>
@@ -459,7 +460,7 @@
                     <a href="http://www.alexa.com/">Alexa Internet</a> has been
                     donating their crawl data to the Internet Archive. Flowing
                     in every day, these data are added to the
-                    <a href="http://web.archive.org/">Wayback Machine</a> after
+                    <a href="http://web.archive.org/">  Machine</a> after
                     an embargo period.
                   </div>
                 </div>
@@ -506,7 +507,7 @@
       </div>
     </div>
     <div id="wm-ipp-print">
-      The Wayback Machine -
+      The   Machine -
       https://web.archive.org/web/20160925104401/http://www.guidepg.com:80/
     </div>
     <script type="text/javascript">
@@ -530,7 +531,7 @@
       __wm.rw(1);
       //]]>
     </script>
-    <!-- END WAYBACK TOOLBAR INSERT -->
+    <!-- END   TOOLBAR INSERT -->
 
     <!-- Start the main container -->
     <div id="container" class="container" role="document">
@@ -623,8 +624,25 @@ LIEN d'édition : http://www.guidepg.com/wp-admin/post.php?post=184&action=edit
       <div id="main" class="row">
         <!-- Row for main content area -->
         <div id="content" role="main">
-          <div class="post-box">
-            <div class="ten offset-by-two">
+          <div class="post-box" style="display: flex;">
+            <div class="addtext" style=" width: 30%; padding: 10px;">
+
+              <p id="text" style="width: 100%; display: inline-block;">
+                Le Guide PG (Paris Gentleman) est une collection de marques françaises de haute couture. Un merci tout particulier à nos partenaires et investisseurs. Pas dans l'ordre, Parisian Gentleman, Lenos, Le Monde, FHCM, AdStage, Vogue.
+              </p>
+              <p style="margin-bottom: 0;">Links to :</p>
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 6rem; margin-top: 0;">
+              <a href="https://www.parisiangentleman.com/">parisiangentleman</a>
+              <a href="https://www.lenostube.com/">lenostube</a>
+              <a href="https://www.lemonde.fr/">lemonde</a>
+              <a href="https://www.fhcm.paris/">fhcm</a>
+              <a href="https://adstage.io/">adstage</a>
+              <a href="https://www.vogue.fr/">vogue</a>
+            </div>
+            </div>
+            
+           
+            <div class="ten offset-by-two" style="margin: 10px;">
               <article
                 id="post-3862"
                 class="post-3862 post type-post status-publish format-standard hentry category-non-classe three columns mobile-two"
@@ -1098,6 +1116,7 @@ data-aos-anchor-placement="bottom-bottom">
           
           Gentleman:"The Parisian Gentleman Guide of Quality Seals is a publication of ",
           heading: "The Parisian Gentleman Guide of Quality Seals",
+          text:"The Guide PG (Paris Gentleman) is a collection of haute couture French brands. A special thanks to our partners and investors. Not in order, Parisian Gentleman, Lenos, Le Monde, FHCM, AdStage, Vogue.",
 
           
          
@@ -1107,6 +1126,7 @@ data-aos-anchor-placement="bottom-bottom">
           
           Gentleman:"Le Guide Parisian Gentleman des Maisons de Qualité est une publication de",
           heading: "Le Guide Parisian Gentleman des Maisons de Qualité",
+          text:"Le Guide PG (Paris Gentleman) est une collection de marques françaises de haute couture. Un merci tout particulier à nos partenaires et investisseurs. Pas dans l'ordre, Parisian Gentleman, Lenos, Le Monde, FHCM, AdStage, Vogue.",
 
          
   
@@ -1129,12 +1149,8 @@ data-aos-anchor-placement="bottom-bottom">
         // Update the heading text based on the selected language
         document.getElementById("heading").textContent = content[language].heading;
         document.getElementById("Gentleman").textContent = content[language].Gentleman;
+        document.getElementById("text").textContent = content[language].text;
 
-       
-  
- 
-  
-  
   }
   
     // Initial rendering
